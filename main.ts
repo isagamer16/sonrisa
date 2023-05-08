@@ -5,4 +5,11 @@ input.onButtonPressed(Button.A, function () {
 radio.onReceivedString(function (receivedString) {
     basic.showIcon(IconNames.Happy)
 })
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    radio.sendString("triste")
+})
+radio.onReceivedValue(function (name, value) {
+    basic.showIcon(IconNames.Sad)
+})
 radio.setGroup(17)
