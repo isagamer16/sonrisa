@@ -7,7 +7,7 @@ radio.onReceivedString(function (receivedString) {
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
-    radio.sendString("triste")
+    radio.sendValue("name", 0)
 })
 radio.onReceivedValue(function (name, value) {
     basic.showIcon(IconNames.Sad)
