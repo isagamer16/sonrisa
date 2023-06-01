@@ -1,15 +1,10 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    basic.showNumber(input.temperature())
+})
 input.onButtonPressed(Button.A, function () {
-    basic.clearScreen()
-    radio.sendString("sonrisa")
+    basic.showNumber(input.temperature())
 })
-radio.onReceivedString(function (receivedString) {
-    basic.showIcon(IconNames.Happy)
+input.onButtonPressed(Button.AB, function () {
+    radio.sendNumber(input.temperature())
 })
-input.onButtonPressed(Button.B, function () {
-    basic.clearScreen()
-    radio.sendValue("name", 0)
-})
-radio.onReceivedValue(function (name, value) {
-    basic.showIcon(IconNames.Sad)
-})
-radio.setGroup(17)
+radio.setGroup(107)
